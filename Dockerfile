@@ -3,8 +3,7 @@
 # Smallest base image
 FROM alpine:3.15.0
 
-# Testing: pamtester
-RUN apk add --update openvpn iptables bash easy-rsa openvpn-auth-pam google-authenticator pamtester libqrencode && \
+RUN apk add --update openvpn iptables bash easy-rsa openvpn-auth-pam google-authenticator libqrencode && \
     ln -s /usr/share/easy-rsa/easyrsa /usr/local/bin && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
 
